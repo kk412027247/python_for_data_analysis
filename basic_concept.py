@@ -107,7 +107,7 @@ def show_person_score(score, score_list, name):
     standard_deviation = np.std(score_list)
     standard_score = (score - mean) / standard_deviation * 100 + 100
 
-    print(name, score, '排名:', str(length - position), '百分位: ', percentile + '%', '标准分:', standard_score)
+    print(name, score, '排名:', str(length - position), '超越了: ', percentile + '%', '标准分:', standard_score)
 
 
 chinese_score = np.loadtxt('./chinese_score.csv', delimiter=',')
@@ -146,4 +146,3 @@ show_person_score(tom_total_score, total_score, '陈小花的总分成绩:')
 # 考生在接受测验后，按照评分标准对其作答反应直接评出来的分数，叫原始分。
 
 
-# 以为自己碉堡了，那么就用诊断系统来测一下，是不是这么牛
