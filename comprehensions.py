@@ -32,7 +32,7 @@ print(unique_lengths2)
 loc_mapping = {val: index for index, val in enumerate(strings)}
 print(loc_mapping)
 
-# 潜逃列表推导式
+# 嵌套列表推导式
 
 all_data = [['John', 'Emily', 'Michael', 'Mary', 'Steven'], ['Maria', 'Juan', 'Javier', 'Natalia', 'Pilar']]
 
