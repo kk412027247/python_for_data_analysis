@@ -25,5 +25,8 @@ model.add(tf.keras.layers.Dense(128, activation='relu'))
 model.add(tf.keras.layers.Dense(num_classes, activation='softmax'))
 
 model.compile(optimizer='sgd', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-model.fit(x_train, y_train, epochs=5, verbose=1, validation_data=(x_test, y_test))
+
+callbacks = [tf.keras.callbacks.TensorBoard('./logs_keras')]
+
+model.fit(x_train, y_train, epochs=5, verbose=1, validation_data=(x_test, y_test), callbacks=callbacks)
 print(model.summary())
